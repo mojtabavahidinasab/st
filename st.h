@@ -89,6 +89,7 @@ void externalpipe(const Arg *);
 void kscrolldown(const Arg *);
 void kscrollup(const Arg *);
 
+void iso14755(const Arg *);
 void printscreen(const Arg *);
 void printsel(const Arg *);
 void sendbreak(const Arg *);
@@ -143,4 +144,5 @@ extern float alpha;
 extern float alphaUnfocus;
 extern const int boxdraw, boxdraw_bold, boxdraw_braille;
 extern unsigned int defaultcs;
+extern char *iso14755_cmd;
 

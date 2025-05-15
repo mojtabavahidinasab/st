@@ -172,6 +172,11 @@ static unsigned int mousefg = 7;
 static unsigned int mousebg = 0;
 
 /*
+ * Command used to query unicode glyphs.
+ */
+char *iso14755_cmd = "dmenu -w \"$WINDOWID\" -p codepoint: </dev/null";
+
+/*
  * Color used to display font attributes when fontconfig selected a font which
  * doesn't match the ones requested.
  */
@@ -283,6 +288,7 @@ static Shortcut shortcuts[] = {
 	{ MODKEY,               XK_l,           externalpipe,   {.v = openurlcmd } },
 	{ MODKEY,               XK_y,           externalpipe,   {.v = copyurlcmd } },
 	{ MODKEY,               XK_o,           externalpipe,   {.v = copyoutput } },
+	{ TERMMOD,              XK_I,           iso14755,       {.i =  0} },
 };
 
 /*
